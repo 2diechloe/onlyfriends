@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFriends</title>
+    <link rel="icon" type="image/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-friends"></i>
+                <span>OnlyFriends</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i> Home</li>
+                    <li><i class="fas fa-bell"></i> Notifications</li>
+                    <li><i class="fas fa-envelope"></i> Messages</li>
+                    <li><i class="fas fa-cog"></i> Settings</li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <button class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1>OnlyFriends</h1>
+            </header>
+
+            <div class="banner">
+                <img src="img/banner.jpg" alt="Banner">
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-pic">
+                    <img src="img/profile.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <h2>Chloe Rhee</h2>
+                    <p class="username">@die.chloe</p>
+                    <p class="bio">✨ Welcome to my OnlyFriends page! ✨<br>Sharing exclusive content with nobody.</p>
+                    <a href="#" class="website">https://paypal.me/2chloerhee</a>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="posts">POSTS</button>
+                <button class="tab-button" data-tab="media">MEDIA</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="posts" class="tab-pane active">
+                    <div class="locked-post">
+                        <div class="lock-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Private Post</h3>
+                        <p>This content is only visible to me.</p>
+                        
+                        <div class="donation-options">
+                            <h4>Donate now to get nothing.</h4>
+                            
+                            <div class="payment-methods">
+                                <button class="payment-method active" data-method="paypal">
+                                    <i class="fab fa-paypal"></i> PayPal
+                                </button>
+                                <button class="payment-method" data-method="bitcoin">
+                                    <i class="fab fa-bitcoin"></i> Bitcoin
+                                </button>
+                                <button class="payment-method" data-method="litecoin">
+                                    <i class="fas fa-coins"></i> Litecoin
+                                </button>
+                            </div>
+                            
+                            <div class="payment-details">
+                                <div id="paypal-details" class="payment-detail active">
+                                    <p>Send payment via PayPal to: <a href="https://paypal.me/2chloerhee" target="_blank" class="paypal-link">paypal.me/chloerhee</a></p>
+                                </div>
+                                <div id="bitcoin-details" class="payment-detail">
+                                    <p>Bitcoin Address: <span id="btc-address">bc1qf9pwgxenxaghs6yluztmn69pyldhe82zznf700</span></p>
+                                    <button class="copy-btn" data-address="bc1qf9pwgxenxaghs6yluztmn69pyldhe82zznf700">
+                                        <i class="far fa-copy"></i> Copy
+                                    </button>
+                                </div>
+                                <div id="litecoin-details" class="payment-detail">
+                                    <p>Litecoin Address: <span id="ltc-address">LMbDScyntfpwDS7NXjWBGoDCtGTP3vyes1</span></p>
+                                    <button class="copy-btn" data-address="LMbDScyntfpwDS7NXjWBGoDCtGTP3vyes1">
+                                        <i class="far fa-copy"></i> Copy
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="terms-checkbox">
+                                <input type="checkbox" id="terms">
+                                <label for="terms">
+                                    I have read and accept the 
+                                    <span class="terms-tooltip">terms and conditions
+                                        <span class="tooltiptext">
+                                            <h4>Terms and Conditions</h4>
+                                            <ol>
+                                                <li>All payments are final and non-refundable.</li>
+                                                <li>Access to content will not be granted.</li>
+                                                <li>Content is not available.</li>
+                                                <li>Sharing content is strictly prohibited.</li>
+                                                <li>We reserve the right to terminate access without refund for any violation of these terms.</li>
+                                            </ol>
+                                        </span>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <button class="donate-button" disabled>
+                                Donate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="media" class="tab-pane">
+                    <div class="no-content">
+                        <i class="far fa-images"></i>
+                        <p>No media available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
